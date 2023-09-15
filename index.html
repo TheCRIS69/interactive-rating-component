@@ -6,22 +6,25 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Interactive rating component</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
-
 </head>
 
 <body>
 <main>
 
-  <section class="rating-start">
-    <div class="rating__star-icon">
+<div class="wrapper">
+  <section class="rating">
+    <div class="rating__icon grid-center">
       <img src="./images/icon-star.svg" alt="A icon with a star">
     </div>
-    <h1 class="title start">How did we do?</h1>
-    <p class="description start">Please let us know how we did with your support request. All feedback is appreciated 
+    <h1 class="rating__title">How did we do?</h1>
+    <p class="rating__description">Please let us know how we did with your support request. All feedback is appreciated 
     to help us improve our offering!</p>
 
-    <div class="rating__options">
+    <div class="ration__options">
       <button class="button">1</button>
       <button class="button">2</button>
       <button class="button">3</button>
@@ -30,16 +33,17 @@
     </div>
     <button class="rating__submit">Submit</button>
   </section>
+</div>
 
-
-  <section class="rating-end">
-    <img src="./images/illustration-thank-you.svg">
-    <h3 class="rating__choose">You selected <span>?</span> out of 5</h3>
-    <h1 class="title end">Thank you!</h1>
-    <p class="description end">We appreciate you taking the time to give a rating. If you ever need more support, 
+  <section class="rating end">
+    <div class="grid-center">
+      <img src="./images/illustration-thank-you.svg">
+    </div>
+    <h3 class="rating__choose">You selected out of 5</h3>
+    <h1 class="rating__title">Thank you!</h1>
+    <p class="rating__description">We appreciate you taking the time to give a rating. If you ever need more support, 
     don't hesitate to get in touch!</p>
   </section> 
-
 
 </main>
 </body>
