@@ -15,7 +15,7 @@
 <body>
 <main>
 
-<div class="wrapper">
+<div class="wrapper" id="start">
   <section class="rating">
     <div class="rating__icon grid-center">
       <img src="./images/icon-star.svg" alt="A icon with a star">
@@ -25,25 +25,27 @@
     to help us improve our offering!</p>
 
     <div class="ration__options">
-      <button class="button">1</button>
-      <button class="button">2</button>
-      <button class="button">3</button>
-      <button class="button">4</button>
-      <button class="button">5</button>
+      <button class="button" data-score="1">1</button>
+      <button class="button" data-score="2">2</button>
+      <button class="button" data-score="3">3</button>
+      <button class="button" data-score="4">4</button>
+      <button class="button" data-score="5">5</button>
     </div>
     <button class="rating__submit">Submit</button>
   </section>
 </div>
 
+<div class="wrapper" id="end">
   <section class="rating end">
     <div class="grid-center">
       <img src="./images/illustration-thank-you.svg">
     </div>
-    <h3 class="rating__choose">You selected out of 5</h3>
+    <h3 class="rating__choose">You selected <span id="score-selection"></span> out of 5</h3>
     <h1 class="rating__title">Thank you!</h1>
     <p class="rating__description">We appreciate you taking the time to give a rating. If you ever need more support, 
     don't hesitate to get in touch!</p>
   </section> 
+</div>
 
 </main>
 </body>
