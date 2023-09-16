@@ -12,7 +12,7 @@
     --fw-regular: 400;
     --fw-bold: 700;
 
-    --border-radius-main: 1rem;
+    --border-radius-main: 2rem;
     --border-radius-cercle: 50%;
 
 }
@@ -41,50 +41,57 @@
   }
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
-  }
+}
 
 
-/* RATING START */
 
 body {
     background-color: var(--clr-neutral-veryDarkBlue);
     font-family: var(--ff-main);
     font-size: var(--fz-regular);
 }
-
+    
 .wrapper {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.grid-center {
+    display: grid;
+    place-items: center;
+}    
 
 .rating {
     display: grid;
     gap: 1rem;
-    width: 375px;
+    max-width: 375px;
     background-color: var(--clr-bg);
     border-radius: var(--border-radius-main);
     padding: 1.5rem;
 }
+    
+@media (max-width: 375px) {
+    .rating {
+        margin: 0 1.2rem;
+   }
+}
+    
 .end {
     text-align: center;
     padding: 2.2rem 1rem;
 }
-
+    
 .rating__icon {
     background-color: var(--clr-neutral-darkBlue);
     width: 40px;
     height: 40px;
     border-radius: var(--border-radius-cercle);
 }
-.grid-center {
-    display: grid;
-    place-items: center;
-}    
 
 .rating__title {
     color: var(--clr-neutral-white);
+    font-size: calc(var(--fz-regular) + .7rem);
 }
 .rating__description {
     color: var(--clr-neutral-mediumGray);
@@ -95,8 +102,8 @@ body {
     gap: 1rem;
 }
 .button {
-    width: 50px;
-    height: 50px;
+    flex: 0 1 50px;
+    aspect-ratio: 1/1;
     background-color: var(--clr-neutral-darkBlue);
     color: var(--clr-neutral-mediumGray);
     border-radius: var(--border-radius-cercle);
@@ -116,9 +123,11 @@ body {
 .rating__submit {
     background-color: var(--clr-primary-orange);
     color: var(--clr-neutral-white);
-    border-radius: var(--border-radius-main);
+    border-radius: calc(var(--border-radius-main) + 1rem);
     border: none;
     padding: .6rem;
+    margin: .5rem 0;
+    box-shadow: 0 .5rem 1rem var(--clr-neutral-veryDarkBlue);
     text-transform: uppercase;
     letter-spacing: .2rem;
     font-weight: var(--fw-bold);
@@ -135,5 +144,5 @@ body {
     font-weight: var(--fw-regular);
     background-color: var(--clr-neutral-darkBlue);
     border-radius: var(--border-radius-main);
-    padding: .2rem 1rem;
+    padding: .4rem 1rem;
 }
